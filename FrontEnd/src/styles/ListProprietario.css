@@ -1,0 +1,109 @@
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título centralizado */
+.container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Botão adicionar */
+.btn-add {
+    margin-bottom: 15px;
+}
+
+/* Estilo da tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Alternância de cores nas linhas */
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botões de ação */
+.btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #fff;
+} 
+
+.btn + .btn {
+    margin-left: 8px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+        /* Esconde cabeçalho em telas pequenas */
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .table td {
+        text-align: left;
+        padding: 8px;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+}

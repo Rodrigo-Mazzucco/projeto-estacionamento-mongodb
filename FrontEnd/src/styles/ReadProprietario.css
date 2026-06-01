@@ -1,0 +1,82 @@
+/* Container principal */
+.read-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título */
+.read-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Estilo da tabela */
+.read-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-table th,
+.read-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.read-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Alternância de cores nas linhas */
+.read-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.read-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .read-table thead {
+        display: none;
+    }
+
+    .read-table,
+    .read-table tbody,
+    .read-table tr,
+    .read-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .read-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .read-table td {
+        text-align: left;
+        padding: 8px;
+        position: relative;
+    }
+
+    .read-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+}
