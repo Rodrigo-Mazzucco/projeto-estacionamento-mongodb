@@ -12,21 +12,25 @@ const ProprietarioSchema = new Schema({
         type: String,
         required: true
     },
-    veiculos: [{
-        placa: {
-            type: String,
-            required: true
-        },
-        ano: {
-            type: Number,
-            required: true
-        },
-        mensalidade: {
-            type: Number,
-            required: true
-        }
-    }]
-}, { collection: 'Proprietario' }); // Especificando o nome da coleção como 'Proprietario'
+    veiculos: {
+        type: [{
+            placa: {
+                type: String,
+                required: true
+            },
+            ano: {
+                type: Number,
+                required: true
+            },
+            mensalidade: {
+                type: Number,
+                required: true
+            }
+        }],
+        default: [] // garante que nunca será null
+    }
+}, { collection: 'Proprietario' });
+// Especificando o nome da coleção como 'Proprietario'
 // Criando o modelo Proprietario baseado no esquema
 const Proprietario = mongoose.model("Proprietario", ProprietarioSchema);
 // Exportando o modelo Proprietario
